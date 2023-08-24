@@ -1,0 +1,29 @@
+<br/><br/><br/><br/><br/><br/>
+
+<h1>Shane's To-Do List!</h1>
+<h2>Enter Task:</h2>
+<input type="string"[(ngModel)]="newTask.name"/>
+<h2>Is it already completed?</h2>
+<input type="checkbox"[(ngModel)]="newTask.completed" />
+<button (click)="addTask()">Add Task</button>
+<br/><br/><br/>
+<h2>Tasks!</h2>
+<div>
+<tr *ngFor="let a of allTasks">
+    <td class="tableData">{{ a.name }}
+        <button (click)="removeTask(a)">Delete</button>
+    </td>
+    <td class="tableData" *ngIf="a.completed == true">All Done!!!!
+        <button (click)="completeTask(a)">x</button>
+    </td>
+    <td class="tableData" *ngIf="a.completed == false">Get To work 
+        <button (click)="completeTask(a)">x</button>
+    </td>
+    
+  </tr>
+  <h1 *ngIf="allDone(allTasks) ==true">You Earned A Nap!</h1>
+</div>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<!-- <td ng-cloak data-ng-class="a.completed : 'strikethrough'">{{ player.name }}</td> -->

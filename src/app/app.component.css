@@ -1,0 +1,15 @@
+
+.footer{
+    background-color: #f85757;
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.header{
+    background-color: #f85757;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+}
